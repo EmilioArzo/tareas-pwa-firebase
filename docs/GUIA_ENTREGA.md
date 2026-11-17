@@ -29,12 +29,12 @@ El README ya explica requisitos, configuración, ejecución, despliegue, reglas 
 
 ### Subir a GitHub
 
+El repositorio local ya está inicializado en la rama `main` y tiene el primer commit hecho.
+Solo falta crear el repositorio remoto y subirlo.
+
 **Con GitHub CLI** (recomendado si lo tienes instalado):
 
 ```bash
-git init
-git add .
-git commit -m "PWA de tareas con Firebase: auth, Firestore y hosting"
 gh repo create tareas-pwa-firebase --public --source=. --remote=origin --push
 ```
 
@@ -44,16 +44,12 @@ gh repo create tareas-pwa-firebase --public --source=. --remote=origin --push
 2. En la carpeta del proyecto:
 
    ```bash
-   git init
-   git add .
-   git commit -m "PWA de tareas con Firebase"
-   git branch -M main
    git remote add origin https://github.com/TU-USUARIO/TU-REPO.git
    git push -u origin main
    ```
 
-3. Antes de hacer `git add`, verifica con `git status` que **no** aparecen `node_modules/`,
-   `dist/` ni `.env.local`. El `.gitignore` ya los excluye.
+3. Comprueba con `git status` que **no** aparecen `node_modules/`, `dist/` ni `.env.local`.
+   El `.gitignore` ya los excluye; si `dist/` existe localmente, no se subirá.
 4. Pega el enlace del repositorio en el README y en el documento de entrega.
 
 > Si el profesor pide el enlace público, comprueba que el repositorio no sea privado o que
